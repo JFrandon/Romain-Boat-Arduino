@@ -21,6 +21,7 @@ void setup(void) {
 
   //Init SD
   Serial.print("Initializing SD card... ");
+  pinMode(4, OUTPUT);
   while (! SD.begin(4)) Serial.println("Initialization failed");
   Serial.println("Initialization done");
   
