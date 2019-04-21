@@ -20,8 +20,10 @@ void setup(void) {
 
 
   //Init SD
-  Serial.print("Initializing SD card... ");
+  SPI.begin();
   pinMode(4, OUTPUT);
+  digitalWrite(4, HIGH);
+  Serial.print("Initializing SD card... ");
   while (! SD.begin(4)) Serial.println("Initialization failed");
   Serial.println("Initialization done");
   
